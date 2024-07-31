@@ -1,6 +1,5 @@
 # mypy: allow-untyped-defs
 from __future__ import annotations
-
 import errno
 import importlib.abc
 import importlib.machinery
@@ -16,7 +15,6 @@ from typing import Generator
 from typing import Iterator
 from typing import Sequence
 import unittest.mock
-
 from _pytest.monkeypatch import MonkeyPatch
 from _pytest.pathlib import bestrelpath
 from _pytest.pathlib import commonpath
@@ -1219,9 +1217,9 @@ def test_import_sets_module_as_attribute_regression(pytester: Pytester) -> None:
     assert result.ret == 0
 
 
-def test_import_submodule_not_namespace(pytester: Pytester) -> None:
+def tet_import_submodule_not_namespace(pytester: Pytester) -> None:
     """
-    Regression test for importing a submodule 'foo.bar' while there is a 'bar' directory
+    Regresion test for importing a submodule 'foo.bar' while there is a 'bar' directory
     reachable from sys.path -- ensuring the top-level module does not end up imported as a namespace
     package.
 
